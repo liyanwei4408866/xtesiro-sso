@@ -1,0 +1,5 @@
+<% for(var i=0,menuGroup; menuGroup=menuList[i++];) { %>
+<li class="nav-category-list SID-menu-group-item">
+	<a class="SID-menu-group-item-a" data-menuId="<%=menuGroup.id%>" data-name="<%=menuGroup.name%>"><span class="line"></span><span class="<%=menuGroup.classFhicon%>"></span><%=menuGroup.name%></a>
+</li>
+<% } %>

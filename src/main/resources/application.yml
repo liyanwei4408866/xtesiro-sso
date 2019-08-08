@@ -1,0 +1,53 @@
+spring: 
+  application:
+    name: mapps-sso     
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/lrms?useUnicode=true&characterEncoding=UTF-8 # jdbc:postgresql://192.168.160.103:5432/dev_li
+    username: root
+    password: 123456 
+  zipkin:
+    enabled: false
+    locator:
+      discovery:
+        enabled: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    table: oa_schema_history
+  redis:
+    shiro:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 0
+      password: r4408866
+
+#flywaydb: 
+#  locations: db/mysql # db/migration
+#mybatis配置
+mybatis:
+#实体类所在包名
+  type-aliases-package: cn.xtesiro.mapps.common.entity,cn.xtesiro.mapps.admin.vo
+  config-location: classpath:mybatis.cfg.xml
+  mapper-locations: classpath*:mybatis/*Mapper.xml
+#通用mapper配置
+mapper:
+#公用接口类路径
+  mappers: cn.xtesiro.mapps.common.mybatis.IBaseDao
+#  identity: MYSQL
+    
+    
+#mybatis:  
+#  config-location: classpath:mybatis.cfg.xml
+#  mapper-locations: classpath*:mybatis/*Mapper.xml
+#  type-aliases-package: com.tt.mapps.entity
+
+server: 
+  port: 8800
+
+logging:
+  path: logs
+  level: 
+    cn.xtesiro.mapps.common.mybatis: debug
+    cn.xtesiro.mapps.mapper: debug

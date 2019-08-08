@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.xtesiro.mapps.mapper.CommUsergroupMapper" >
+  <resultMap id="BaseResultMap" type="cn.xtesiro.mapps.common.entity.CommUsergroup" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="groupName" property="groupName" jdbcType="VARCHAR" />
+    <result column="isDelete" property="isDelete" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, groupName, isDelete
+  </sql>
+  <select id="getList" resultMap="Usergroup" >
+    select a.id usergroupid,a.groupname,group_concat(c.descn separator ',') rolename 
+    from comm_usergroup a
+	left join comm_usergrp_role b on a.id = b.usergrp_id 
+	left join comm_role c on b.role_id = c.id 
+    where a.isdelete = 0 
+    group by a.id,a.groupname 
+  </select>
+</mapper>

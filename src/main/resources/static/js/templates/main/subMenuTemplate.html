@@ -1,0 +1,5 @@
+<% for(var i=0,submenu; submenu=menuList[i++];) { %>
+<li class="sublist SID-menu-item">
+	<a class="SID-menu-item-a" data-menuUrl="<%=submenu.resString%>" data-menuId="<%=submenu.id%>" data-parentId="<%=submenu.presc%>"><%=submenu.name%></a>
+</li>
+<% } %>

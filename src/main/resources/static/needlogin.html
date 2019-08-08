@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="fonts/font.css">
+    <script type="text/javascript" charset="utf-8" src="/js/lib/jquery/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <div id="wx_reg" style="text-align: center;"></div>
+	<script type="text/javascript">
+	(function(window, document, undefined) {
+
+		function WwLogin(data) {
+			var frame = document.createElement("iframe");
+			var url = "https://miap.cc:8570/wwopen/sso/qrConnect?appid=" + data.appid + "&agentid=" + data.agentid + "&redirect_uri=" + data.redirect_uri + "&state=" + data.state + "&login_type=jssdk";
+			url += data.style ? ("&style=" + data.style) : "";
+			url += data.href ? ("&href=" + data.href) : "";
+			frame.src = url;
+			frame.frameBorder = "0";
+			frame.allowTransparency="true";
+			frame.scrolling = "no";
+			frame.width = "300px";
+			frame.height = "400px";
+			var el = document.getElementById(data.id);
+			el.innerHTML = "";
+			el.appendChild(frame);
+
+			frame.onload = function() {
+				if(frame.contentWindow.postMessage && window.addEventListener){
+					window.addEventListener("message", function (event) {
+						var host = "miap.cc";
+						var hostArr = host.split(':');
+						if (hostArr[1] == 80) host = hostArr[0];
+						if(event.data && event.origin.indexOf(host) > -1){
+							window.location.href= event.data;
+						}
+					});
+					frame.contentWindow.postMessage("ask_usePostMessage" , "*")
+				}
+			};
+		}
+
+		window.WwLogin = WwLogin;
+	})(window, document);
+	window.WwLogin({
+        "id" : "wx_reg",  
+        "appid" : "wl50ea71a776",
+        "agentid" : "1000017",
+        "redirect_uri" :"http://miap.cc:8565/wxsso",
+        "state" : "0",
+        "href" : "",
+	});
+	</script>
+</body>
+</html>

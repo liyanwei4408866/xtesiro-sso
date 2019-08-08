@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\.m2\repository\mysql\mysql-connector-java\8.0.16\mysql-connector-java-8.0.16.jar" />
+	<context id="context1">
+		<commentGenerator>
+			<!--是否取消注销 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/lrms?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"
+			userId="root" password="123456">
+		</jdbcConnection>
+		<!-- 所生成的实体类的位置默认资源包src -->
+		<javaModelGenerator
+			targetPackage="cn.xtesiro.mapps.entity" targetProject="src/main/java">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.st.eleventh.user.model， true:com.st.eleventh.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--所生成的sqlMapper的映射文件位置，默认资源包src -->
+		<sqlMapGenerator targetPackage="mybatis"
+			targetProject="src/main/resources">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.st.eleventh.user.model， true:com.st.eleventh.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!--配置到接口生成信息 -->
+		<javaClientGenerator
+			targetPackage="cn.xtesiro.mapps.mapper" type="XMLMAPPER"
+			targetProject="src/main/java">
+			<!-- 是否在当前路径下新加一层schema,eg：fase路径com.st.eleventh.user.model， true:com.st.eleventh.user.model.[schemaName] -->
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+
+		<!-- 配置表信息 -->
+
+
+<table schema="parkingdb" tableName="accesslog" 
+domainObjectName="Accesslog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="dbbackup" 
+domainObjectName="Dbbackup" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="enterguard" 
+domainObjectName="Enterguard" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="enterguarddevice" 
+domainObjectName="Enterguarddevice" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="enterguardinrom" 
+domainObjectName="Enterguardinrom" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_access_control_record" 
+domainObjectName="LrmsAccessControlRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_article" 
+domainObjectName="LrmsArticle" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_articletype" 
+domainObjectName="LrmsArticletype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_attachment" 
+domainObjectName="LrmsAttachment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_device_attachment" 
+domainObjectName="LrmsDeviceAttachment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_device_role" 
+domainObjectName="LrmsDeviceRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_erreport" 
+domainObjectName="LrmsErreport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_experiment" 
+domainObjectName="LrmsExperiment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_incomemail" 
+domainObjectName="LrmsIncomemail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_increaseorcutpoint" 
+domainObjectName="LrmsIncreaseorcutpoint" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_instrument" 
+domainObjectName="LrmsInstrument" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_instrumentappointmentsetting" 
+domainObjectName="LrmsInstrumentappointmentsetting" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_instrumentcharges" 
+domainObjectName="LrmsInstrumentcharges" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_instrumentreservation" 
+domainObjectName="LrmsInstrumentreservation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_lab" 
+domainObjectName="LrmsLab" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_letter" 
+domainObjectName="LrmsLetter" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_letterattachment" 
+domainObjectName="LrmsLetterattachment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_link" 
+domainObjectName="LrmsLink" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_member" 
+domainObjectName="LrmsMember" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_message" 
+domainObjectName="LrmsMessage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_navigation" 
+domainObjectName="LrmsNavigation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_question" 
+domainObjectName="LrmsQuestion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_registrationinfo" 
+domainObjectName="LrmsRegistrationinfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_researvationinstrument" 
+domainObjectName="LrmsResearvationinstrument" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_scoresetting" 
+domainObjectName="LrmsScoresetting" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_sendmail" 
+domainObjectName="LrmsSendmail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_settlement" 
+domainObjectName="LrmsSettlement" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_showpic" 
+domainObjectName="LrmsShowpic" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_siteset" 
+domainObjectName="LrmsSiteset" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="lrms_usergroup" 
+domainObjectName="LrmsUsergroup" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="major" 
+domainObjectName="Major" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="monitor" 
+domainObjectName="Monitor" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="project" 
+domainObjectName="Project" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="project_member" 
+domainObjectName="ProjectMember" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="student" 
+domainObjectName="Student" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+<table schema="parkingdb" tableName="subscribe_device" 
+domainObjectName="SubscribeDevice" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"> <property name="useActualColumnNames" value="true" /> </table>
+
+	</context>
+</generatorConfiguration>
